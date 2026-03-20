@@ -951,12 +951,14 @@ body {
     <div class="shooting-star"></div>
   </div>
   
+  <!-- Mensaje en la parte izquierda central con estilo mejorado -->
+  <div style="position: fixed; left: 5%; top: 50%; transform: translateY(-50%); width: 300px; max-width: 90%; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(10px); border: 2px solid #ffd700; border-radius: 20px; padding: 25px; box-shadow: 0 0 30px rgba(255, 215, 0, 0.5), 0 0 15px rgba(255, 255, 255, 0.3); z-index: 100; color: white; font-family: 'Arial', sans-serif; text-align: left; animation: fadeIn 2s ease-in-out;">
+    <p style="margin: 0; font-size: 1.1rem; line-height: 1.6; text-shadow: 0 0 8px rgba(255,215,0,0.3);">
+      Aunque no podamos vernos hoy, quise hacerle este pequeño detalle 💛 para que sienta que estoy ahí con usted, acompañándole en cada momento. La distancia no cambia lo que siento, solo me hace buscar nuevas formas de demostrarle cuánto le amo. Usted es mi lugar favorito, incluso cuando no puedo estar físicamente ahí ✨
+    </p>
+  </div>
+  
   <div class="flowers">
-    <!-- Mensaje agregado aquí -->
-    <div style="position: absolute; top: -200px; left: 50%; transform: translateX(-50%); width: 80%; max-width: 600px; text-align: center; color: #fff; font-family: 'Arial', sans-serif; text-shadow: 0 0 10px rgba(255,215,0,0.5); background: rgba(0,0,0,0.3); padding: 20px; border-radius: 15px; backdrop-filter: blur(5px); border: 1px solid rgba(255,215,0,0.3); z-index: 100;">
-      <p style="margin: 0; font-size: 1.1rem; line-height: 1.6;">Aunque no podamos vernos hoy, quise hacerle este pequeño detalle 💛 para que sienta que estoy ahí con usted, acompañándole en cada momento. La distancia no cambia lo que siento, solo me hace buscar nuevas formas de demostrarle cuánto le amo. Usted es mi lugar favorito, incluso cuando no puedo estar físicamente ahí ✨</p>
-    </div>
-    
     <div class="flower flower--1">
       <div class="flower__leafs flower__leafs--1">
         <div class="flower__leaf" style="transform: translate(-50%, -10%) rotate(0deg);"></div>
@@ -1291,5 +1293,12 @@ body {
       }, 1000);
     };
   </script>
+  
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-50%) translateX(-20px); }
+      to { opacity: 1; transform: translateY(-50%) translateX(0); }
+    }
+  </style>
 </body>
 </html>
