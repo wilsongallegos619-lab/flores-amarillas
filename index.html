@@ -21,7 +21,7 @@
 
         body {
             display: flex;
-            align-items: flex-end;
+            align-items: center;
             justify-content: center;
             min-height: 100vh;
             background-color: var(--dark-color);
@@ -190,40 +190,49 @@
             }
         }
 
-        /* Contenedor principal para flores y texto */
+        /* Contenedor principal centrado */
         .main-container {
             position: relative;
             width: 100%;
+            max-width: 1400px;
             height: 100vh;
             display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-            padding: 0 5% 5% 5%;
+            align-items: center;
+            justify-content: center;
+            gap: 5%;
+            padding: 0 5%;
             z-index: 2;
+            margin: 0 auto;
         }
 
-        /* Contenedor de flores - movido más a la izquierda */
+        /* Contenedor de flores - centrado y ajustado */
         .flowers {
             position: relative;
-            transform: scale(0.9) translateX(-15%); /* Movido más a la izquierda */
-            transform-origin: bottom center;
+            transform: scale(0.9);
+            transform-origin: center;
             z-index: 2;
-            margin-left: -10%;
+            flex: 0 0 auto;
+            width: 45%;
+            min-width: 500px;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
         }
 
-        /* Mensaje en la parte derecha */
+        /* Mensaje - centrado y proporcionado */
         .message-container {
             width: 40%;
             max-width: 500px;
             background: rgba(0, 0, 0, 0.6);
             backdrop-filter: blur(8px);
             border-radius: 20px;
-            padding: 30px;
+            padding: 35px;
             border: 2px solid rgba(255, 215, 0, 0.5);
             box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
             animation: messageGlow 3s ease-in-out infinite;
             z-index: 10;
-            margin-right: 5%;
+            flex: 0 0 auto;
         }
 
         .message-text {
@@ -240,9 +249,9 @@
         }
 
         .message-text .heart-emoji {
-            font-size: 2rem;
+            font-size: 2.5rem;
             display: block;
-            margin-top: 20px;
+            margin-top: 25px;
             animation: heartBeat 1.5s ease-in-out infinite;
         }
 
@@ -992,28 +1001,43 @@
         }
 
         /* Responsive */
-        @media (max-width: 768px) {
+        @media (max-width: 1000px) {
             .main-container {
-                flex-direction: column;
-                align-items: center;
-                justify-content: flex-end;
-                padding: 0 5% 5% 5%;
+                gap: 3%;
             }
             
             .flowers {
-                transform: scale(0.7) translateX(0);
-                margin-left: 0;
-                margin-bottom: 20px;
+                min-width: 400px;
             }
             
             .message-container {
-                width: 90%;
-                margin-right: 0;
-                margin-bottom: 30px;
+                padding: 25px;
             }
             
             .message-text {
                 font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+                justify-content: center;
+                gap: 30px;
+                padding: 20px;
+            }
+            
+            .flowers {
+                width: 100%;
+                min-width: unset;
+                height: 50vh;
+                transform: scale(0.8);
+            }
+            
+            .message-container {
+                width: 90%;
+                max-width: 400px;
+                margin: 0 auto;
             }
         }
     </style>
@@ -1033,7 +1057,7 @@
     </div>
     
     <div class="main-container">
-        <!-- Flores movidas más a la izquierda -->
+        <!-- Flores centradas a la izquierda -->
         <div class="flowers">
             <div class="flower flower--1">
                 <div class="flower__leafs flower__leafs--1">
@@ -1341,7 +1365,7 @@
             </div>
         </div>
 
-        <!-- Mensaje en la parte derecha -->
+        <!-- Mensaje centrado a la derecha -->
         <div class="message-container">
             <div class="message-text">
                 <p>Aunque no podamos vernos hoy, quise hacerle este pequeño detalle 💛 para que sienta que estoy ahí con usted, acompañándole en cada momento.</p>
